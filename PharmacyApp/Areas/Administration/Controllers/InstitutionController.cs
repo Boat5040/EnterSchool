@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EnterSchoolApp.Constants;
+using EnterSchoolApp.Controllers;
 
 namespace EnterSchoolApp.Areas.Administration.Controllers
 {
-    public class InstitutionController : Controller
+    public class InstitutionController : BaseController
     {
         // GET: Administration/Institution
 

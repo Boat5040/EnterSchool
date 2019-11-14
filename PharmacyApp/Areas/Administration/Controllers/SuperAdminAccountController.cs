@@ -42,13 +42,10 @@ namespace EnterSchoolApp.Areas.Administration.Controllers
 
 
         // GET: Administration/SuperAdminAccount
-        public ActionResult Index()
-        {
-            return View();
-        }
+        public ActionResult Index() => View();
 
         [HttpPost]
-        [Route("super-users")]
+        //[Route("super-users")]
         public ActionResult Index(JQueryDataTablesModel viewModel)
         {
             int totalRecordCount;

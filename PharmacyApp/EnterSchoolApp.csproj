@@ -326,6 +326,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Areas\Administration\AdministrationScripts\JQueryDataTablesClientScripts\SuperAdmin\UserAdmin.js" />
     <Content Include="Client Scripts\mvcfoolproof.unobtrusive.js" />
     <Content Include="Client Scripts\mvcfoolproof.unobtrusive.min.js" />
     <Content Include="Client Scripts\MvcFoolproofJQueryValidation.js" />
@@ -864,6 +865,10 @@
     <Content Include="Content\DataTables-1.9.1\extras\TableTools\media\images\psd\printer.psd" />
     <Content Include="Content\DataTables-1.9.1\media\images\Sorting icons.psd" />
     <Content Include="Areas\Administration\Views\web.config" />
+    <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_LayoutOld.cshtml" />
+    <Content Include="Areas\Administration\Views\SuperAdminAccount\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
     <None Include="NWebsecConfig\HttpHeaderSecurityModuleConfig.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -933,7 +938,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administration\Views\Shared\" />
     <Folder Include="Extentions\" />
   </ItemGroup>
   <ItemGroup>
