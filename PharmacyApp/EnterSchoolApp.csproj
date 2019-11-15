@@ -875,7 +875,9 @@
     <Content Include="Areas\Administration\Views\SuperAdminAccount\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Administration\Views\Institution\Index.cshtml" />
-    <Content Include="Areas\Administration\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\AdminAccount\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\SuperAdminAccount\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\Institution\Create.cshtml" />
     <None Include="NWebsecConfig\HttpHeaderSecurityModuleConfig.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -945,6 +947,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administration\Views\Admin\" />
     <Folder Include="Extentions\" />
   </ItemGroup>
   <ItemGroup>

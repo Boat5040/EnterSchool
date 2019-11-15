@@ -1,6 +1,4 @@
-﻿
-@model IEnumerable<EnterSchoolApp.Areas.Administration.Models.Admin.AdminAccountViewModel>
-@using EnterSchoolApp.Constants
+﻿@model IEnumerable<EnterSchoolApp.Areas.Administration.Models.Admin.AdminAccountViewModel>
 @{
     ViewBag.Title = "Administrators";
 }
@@ -10,7 +8,7 @@
         <h2>ADMINISTRATORS</h2>
         <ol class="breadcrumb">
             <li>
-               @* <a href="@Url.RouteUrl(HomeControllerRoute.GetIndex)">Home</a>*@
+                @* <a href="@Url.RouteUrl(HomeControllerRoute.GetIndex)">Home</a>*@
             </li>
             <li class="active">
                 <a href="#">@ViewBag.Title</a>
@@ -25,7 +23,7 @@
             <div class="ibox float-e-margins">
                 <div class="ibox ibox-content">
                     <p>
-                        <a href="@Url.Action("Create","Admin",new { area="Administration"})" class="btn btn-primary ">New Admin</a>
+                        <a href="@Url.Action("Create","AdminAccount",new { area="Administration"})" class="btn btn-sm btn-primary ">New Admin</a>
                     </p>
                     <table id="myData" class="table table-responsive table-striped table-bordered table-hover dataTables-example">
                         <thead>

@@ -40,9 +40,9 @@ namespace EnterSchoolAppAreas.Administration.DataTableCollections
                         sortedCollection = sortedCollection == null ? institutions.CustomSort(sortedColumn.Direction, x => x.Name)
                             : sortedCollection.CustomSort(sortedColumn.Direction, x => x.Name);
                         break;
-                    case "Title":
-                        sortedCollection = sortedCollection == null ? institutions.CustomSort(sortedColumn.Direction, x => x.Title)
-                            : sortedCollection.CustomSort(sortedColumn.Direction, x => x.Title);
+                    case "Subdomain":
+                        sortedCollection = sortedCollection == null ? institutions.CustomSort(sortedColumn.Direction, x => x.Subdomain)
+                            : sortedCollection.CustomSort(sortedColumn.Direction, x => x.Subdomain);
                         break;
 
                     case "Phone":
@@ -62,7 +62,7 @@ namespace EnterSchoolAppAreas.Administration.DataTableCollections
                     InstitutionId = x.InstitutionId,
                     Phone = x.Phone,
                     Name = x.Name,
-                    Title =x.Title,
+                    Subdomain =x.Subdomain,
                     Email = x.Email
                 }).ToList();
         }

@@ -18,8 +18,8 @@ namespace EnterSchoolApp.Areas.Administration.Models.Institution
 
         public byte[] LogoImage { get; set; }
 
-        [Display(Name = "Title")]
-        public string Title { get; set; }
+        [Display(Name = "Subdomain")]
+        public string Subdomain { get; set; }
 
 
         [Display(Name = "Phone Number")]
@@ -48,6 +48,12 @@ namespace EnterSchoolApp.Areas.Administration.Models.Institution
         [EmailAddress(ErrorMessage = "Please enter a valid email address")]
         [Display(Name = "Email Address")]
         public string Email { get; set; }
+
+        [Display(Name = "Web")]
+        public string Site { get; set; }
+
+        [Display(Name= "Subdomain")]
+        public string Subdomain { get; set; }
 
         [Display(Name = "Intitution Logo")]
         public HttpPostedFileBase File { get; set; }

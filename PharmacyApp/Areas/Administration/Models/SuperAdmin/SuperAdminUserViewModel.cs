@@ -43,7 +43,7 @@ namespace EnterSchoolApp.Areas.Administration.Models.SuperAdmin
         public string UserName { get; set; }
 
         [Required]
-        [Display(Name = "Password")]
+        [Display(Name = "Email")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 

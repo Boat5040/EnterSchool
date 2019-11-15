@@ -15,13 +15,14 @@ namespace EnterSchoolApp.Models
         public int InstitutionId { get; set; }
 
         [Required]
-        public string Name { get; set; }
-
-        [Required]
         public string Title { get; set; }
 
         [Required]
         public string Phone { get; set; }
+
+
+        [Required]
+        public string Subdomain { get; set; }
 
         [Column(TypeName = "image")]
         public byte[] IntitutionLogo { get; set; }
