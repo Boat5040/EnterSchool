@@ -6,7 +6,7 @@
         "sServerMethod": "POST",
         "aoColumns": [
             { "mDataProp": "Name" },
-            { "mDataProp": "Title" },
+            { "mDataProp": "Subdomain" },
             { "mDataProp": "Phone" },
             { "mDataProp": "Email" },
             { "mDataProp": "InstitutionId", "bSearchable": false, "bSortable": false }

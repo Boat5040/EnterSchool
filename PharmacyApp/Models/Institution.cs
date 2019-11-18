@@ -15,7 +15,7 @@ namespace EnterSchoolApp.Models
         public int InstitutionId { get; set; }
 
         [Required]
-        public string Title { get; set; }
+        public string Name { get; set; }
 
         [Required]
         public string Phone { get; set; }

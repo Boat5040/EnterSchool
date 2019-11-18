@@ -74,11 +74,7 @@
 
             if (User.IsInRole(UserRoles.Administrator))
             {
-                //var model = new ViewModels.AdminDashboardViewModel
-                //{
-
-                //};
-                //return View(HomeControllerAction.Index, model);
+                return RedirectToAction("IndexAdmin","AdminAccount", new { area="Administration"});
             }
             else if (User.IsInRole(UserRoles.SuperAdministrator))
             {

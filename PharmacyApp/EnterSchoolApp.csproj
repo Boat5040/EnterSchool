@@ -13,7 +13,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EnterSchoolyApp</RootNamespace>
+    <RootNamespace>EnterSchoolApp</RootNamespace>
     <AssemblyName>EnterSchoolApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
@@ -243,9 +243,11 @@
     <Compile Include="App_Start\Startup.Container.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
     <Compile Include="Areas\Administration\Controllers\AdminAccountController.cs" />
+    <Compile Include="Areas\Administration\Controllers\BranchController.cs" />
     <Compile Include="Areas\Administration\Controllers\InstitutionController.cs" />
     <Compile Include="Areas\Administration\Controllers\SecurityPolicyController.cs" />
     <Compile Include="Areas\Administration\Controllers\SuperAdminAccountController.cs" />
+    <Compile Include="Areas\Administration\Controllers\TeacherController.cs" />
     <Compile Include="Areas\Administration\DataTableCollections\AdminCollection.cs" />
     <Compile Include="Areas\Administration\DataTableCollections\BaseEntityCollection.cs" />
     <Compile Include="Areas\Administration\DataTableCollections\BranchCollection.cs" />
@@ -259,6 +261,7 @@
     <Compile Include="Areas\Administration\Models\Institution\InstitutionModel.cs" />
     <Compile Include="Areas\Administration\Models\SuperAdmin\SuperAdminDashboardViewModel.cs" />
     <Compile Include="Areas\Administration\Models\SuperAdmin\SuperAdminUserViewModel.cs" />
+    <Compile Include="Areas\Administration\Models\Teacher\TeacherModel.cs" />
     <Compile Include="Constants\AccountController\AccountControllerAction.cs" />
     <Compile Include="Constants\AccountController\AccountControllerRoute.cs" />
     <Compile Include="Constants\Alerts.cs" />
@@ -330,6 +333,7 @@
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Areas\Administration\AdministrationScripts\JQueryDataTablesClientScripts\Admin\AdminJs.js" />
+    <Content Include="Areas\Administration\AdministrationScripts\JQueryDataTablesClientScripts\Branch\BranchJs.js" />
     <Content Include="Areas\Administration\AdministrationScripts\JQueryDataTablesClientScripts\Institution\InstitutionJs.js" />
     <Content Include="Areas\Administration\AdministrationScripts\JQueryDataTablesClientScripts\SuperAdmin\UserAdmin.js" />
     <Content Include="Client Scripts\mvcfoolproof.unobtrusive.js" />
@@ -878,6 +882,12 @@
     <Content Include="Areas\Administration\Views\AdminAccount\Index.cshtml" />
     <Content Include="Areas\Administration\Views\SuperAdminAccount\Create.cshtml" />
     <Content Include="Areas\Administration\Views\Institution\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\AdminAccount\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\Branch\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\Branch\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Teacher\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_layoutAdmin.cshtml" />
+    <Content Include="Areas\Administration\Views\AdminAccount\IndexAdmin.cshtml" />
     <None Include="NWebsecConfig\HttpHeaderSecurityModuleConfig.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -944,10 +954,10 @@
     <Content Include="Views\Shared\_TopNavbar.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\IndexSuper.cshtml" />
+    <Content Include="Views\Shared\_layoutAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administration\Views\Admin\" />
     <Folder Include="Extentions\" />
   </ItemGroup>
   <ItemGroup>

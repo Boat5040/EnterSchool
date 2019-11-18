@@ -25,7 +25,7 @@ namespace EnterSchoolAppAreas.Administration.DataTableCollections
 
             if (!string.IsNullOrWhiteSpace(searchString))
             {
-                institutions = institutions.Where(x => x.Name.ToLower().Contains(searchString.ToLower()) ||x.Title.StartsWith(searchString)||
+                institutions = institutions.Where(x => x.Name.ToLower().Contains(searchString.ToLower()) ||
                 x.Phone.StartsWith(searchString) || x.Email.ToLower().Contains(searchString.ToLower()));
             }
 
@@ -59,10 +59,11 @@ namespace EnterSchoolAppAreas.Administration.DataTableCollections
             return sortedCollection.Skip(startIndex).Take(pageSize)
                 .Select(x => new InstitutionViewModel
                 {
-                    InstitutionId = x.InstitutionId,
-                    Phone = x.Phone,
+                    
                     Name = x.Name,
                     Subdomain =x.Subdomain,
+                    InstitutionId = x.InstitutionId,
+                    Phone = x.Phone,
                     Email = x.Email
                 }).ToList();
         }
