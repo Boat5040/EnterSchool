@@ -20,5 +20,6 @@ namespace EnterSchoolApp.Constants
         public const string SitemapXml = "SitemapXml";
 
         public const string IndexSuper = "IndexSuper";
+        public const string IndexAdmin = "IndexAdmin";
     }
 }

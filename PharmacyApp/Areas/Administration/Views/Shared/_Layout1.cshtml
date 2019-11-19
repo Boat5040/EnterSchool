@@ -1,5 +1,4 @@
-﻿
-@using Microsoft.AspNet.Identity;
+﻿@using Microsoft.AspNet.Identity;
 @using Microsoft.AspNet.Identity.Owin;
 @using EnterSchoolApp.Constants;
 
@@ -8,16 +7,15 @@
     string institution = currentUser.Institution == null ? "EnterSchoolApp" : currentUser.Institution.Name;
 
 }
-
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pharmacy App" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pharmacy App | @ViewBag.Title</title>
-
+    <title>INSPINIA | @ViewBag.Title</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="~/Content/animate.css" rel="stylesheet" />
@@ -25,59 +23,60 @@
     <link href="~/Content/Site.css" rel="stylesheet" />
     <link href="~/Content/toastr.min.css" rel="stylesheet" />
     @RenderSection("styles", required: false)
-
-    @*@Styles.Render("~/Content/css")
-        @Styles.Render("~/font-awesome/css")*@
 </head>
-<body>
-    <form id="logout-form" style="display: none;" action="@Url.Action("LogOff","Account")" method="post">
-        @Html.AntiForgeryToken()
-    </form>
-    <div id="wrapper">
-        <div id="page-wrapper" class="gray-bg">
+<body class="top-navigation">
+
+    <!-- Skin configuration box -->
+    <!-- Wrapper-->
+    <!-- PageClass give you ability to specify custom style for specific view based on action -->
+    <div id="wrapper" class="@Html.PageClass()">
+
+        <!-- Page wraper -->
+        <div id="page-wrapper" class="gray-bg @ViewBag.SpecialClass">
+
+            <!-- Top Navbar -->
             <div class="row border-bottom white-bg">
-                <nav class="navbar-default navbar-static-top" role="navigation">
+                <nav class="navbar navbar-static-top" role="navigation">
                     <div class="navbar-header">
-                        <ul class="nav navbar-top-links navbar-right">
-                            <li>
-                                <span class="m-r-sm text-muted welcome-message">@currentUser.UserName | @institution</span>
-                            </li>
-                            <li>
-                                <a href="@Url.Action(AccountControllerRoute.GetLogOff)" role="button" class="cmd-logout">
-                                    <i class="fa fa-sign-out"></i> Log out
-                                </a>
-                            </li>
-                        </ul>
+                        <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                            <i class="fa fa-reorder"></i>
+                        </button>
+                        <a href="#" class="navbar-brand">ESS</a>
                     </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">@currentUser.UserName | @institution</span>
+                        </li>
+                        <li>
+                            <a href="@Url.Action(AccountControllerRoute.GetLogOff)" role="button" class="cmd-logout">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                    </ul>
+
                 </nav>
             </div>
-            <!--Notify-->
             <input id="toastr-info" type="hidden" value="@TempData[Alerts.Info]" />
             <input id="toastr-warn" type="hidden" value="@TempData[Alerts.Warn]" />
             <input id="toastr-success" type="hidden" value="@TempData[Alerts.Success]" />
             <input id="toastr-error" type="hidden" value="@TempData[Alerts.Error]" />
-
-
-            <!--Dashboard Body-->
-            @RenderBody()
-
+            <!-- Main view  -->
+                @RenderBody()
+            <!-- Footer -->
             <div class="footer">
                 <div class="pull-right">
                     <strong>@Application.Name&reg;</strong>.
                 </div>
                 <div>
-                    <strong>Copyright</strong> EnterSchoolApp &copy; @DateTime.Now.Year
+                    <strong>Copyright - </strong>Enter School App &copy; @DateTime.Now.Year
                 </div>
             </div>
         </div>
-    </div>
+        <!-- End page wrapper-->
 
-    @*@Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @Scripts.Render("~/plugins/metsiMenu")
-        @Scripts.Render("~/plugins/pace")
-        @Scripts.Render("~/plugins/slimScroll")
-        @Scripts.Render("~/bundles/inspinia")*@
+    </div>
+    <!-- End wrapper-->
+    <!-- Section for main scripts render -->
     <script src="~/Scripts/jquery-3.2.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/plugins/metisMenu/metisMenu.min.js"></script>
@@ -89,3 +88,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+

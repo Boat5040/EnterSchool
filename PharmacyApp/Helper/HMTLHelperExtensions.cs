@@ -28,5 +28,11 @@ namespace EnterSchoolApp
             return new MvcHtmlString("");
         }
 
+        public static string PageClass(this HtmlHelper html)
+        {
+            string currentAction = (string)html.ViewContext.RouteData.Values["action"];
+            return currentAction;
+        }
+
     }
 }

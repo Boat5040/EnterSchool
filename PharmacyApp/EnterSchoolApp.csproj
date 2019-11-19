@@ -886,8 +886,8 @@
     <Content Include="Areas\Administration\Views\Branch\Create.cshtml" />
     <Content Include="Areas\Administration\Views\Branch\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Teacher\Index.cshtml" />
-    <Content Include="Areas\Administration\Views\Shared\_layoutAdmin.cshtml" />
     <Content Include="Areas\Administration\Views\AdminAccount\IndexAdmin.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_Layout1.cshtml" />
     <None Include="NWebsecConfig\HttpHeaderSecurityModuleConfig.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -952,9 +952,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_LoginPartial2.cshtml" />
     <Content Include="Views\Shared\_TopNavbar.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\IndexSuper.cshtml" />
     <Content Include="Views\Shared\_layoutAdmin.cshtml" />
+    <Content Include="Views\Home\IndexAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
